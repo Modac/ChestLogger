@@ -1,0 +1,38 @@
+name: ChestLogger
+main: org.myftp.p_productions.ChestLogger.ChestLogger
+version: __build.number__
+commands:
+  chestlogger:
+    description: Main ChestLogger command
+    usage: /<command> <enable|disable|show|check>
+    aliases: cl
+    
+permissions:
+  chestlogger.*:
+    description: Gives access to all FallbackConfigure commands
+    children:
+      chestlogger.chestlogger: true
+      chestlogger.enable: true
+      chestlogger.disable: true
+      chestlogger.show: true
+      chestlogger.msg: true
+      chestlogger.check: true
+    default: op
+  chestlogger.chestlogger:
+    description: Allows to use the ChestLogger command
+    default: op
+  chestlogger.enable:
+    description: Allows to enable chest logging
+    default: op
+  chestlogger.disable:
+    description: Allows to disable chest logging
+    default: op
+  chestlogger.show:
+    description: Allows to see chest log
+    default: op
+  chestlogger.msg:
+    description: Allows to see ChestLogger messages
+    default: op
+  chestlogger.ckeck:
+    description: Allows to see ChestLogger messages
+    default: op

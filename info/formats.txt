@@ -1,0 +1,58 @@
+
+opened/close:
+    unixtimestamp player opened|closed world x y z chest|doublechest
+    [date] player
+      opened|closed chest|doublechest
+      at x y z in world
+
+clicked:
+    unixtimestamp player clicked world x y z slotItemName slotAmount cursorItemName cursorAmount invHolderClassName slot type action
+    [date] player
+        clicked on itemName
+        in invHolderClassName Inventory
+        on slot slot
+        (using type type )to perform action
+    
+dropped:
+    unixtimestamp player dropped world x y z itemName amount type action
+    [date] player
+        dropped amount itemName
+        to perform action
+    
+dragged:
+    unixtimestamp player dragged world x y z itemName amount topSlotsCount bottomSlotsCount type
+    [date] player
+        dragged amount itemName
+        onto topSlotsCount top slots
+        and bottomSlotsCount bottom slots
+        using drag (type) type
+    
+collect:
+    unixtimestamp player collected world x y z itemName amount invHolderClassName type action
+    [date] player
+	     collected amount itemName
+	     to cursor
+
+exception:
+	 [Exception] unixtimestamp msg\n
+	 [Exception] stack_trace 
+	 
+show command:
+	 player:
+		 chestlogger show (looking block) (true) (-1)
+		 chestlogger show x y z
+		 chestlogger show x y z world
+		 chestlogger show x y z world excludeme
+		 chestlogger show x y z world excludeme seconds
+		 
+	 console:
+		 chestlogger show x y z (first world in world list) (false) (-1)
+		 chestlogger show x y z world
+		 chestlogger show x y z world coloredNames
+		 chestlogger show x y z world coloredNames seconds
+		 
+		 
+		 
+123456 +10 123466
+123457 +10 123467 >=
+123467
